@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home/Home.module.css'
 import Design from '../comps/Home/Design'
+import Lamp from '../comps/Home/Lamp'
 
 export default function Home() {
   return (
@@ -20,10 +21,63 @@ export default function Home() {
           <h3 className={styles.introText} id={styles.landingSubSubText}>My goal is to help people bring their online business to the next level!</h3>
         </article>
         <div className={styles.imgContainer}>
-          <Image src="/me.svg" layout="fill" />
+          <Image 
+            src="/me.svg" 
+            alt="illustration about me" 
+            layout="fill" 
+          />
         </div>
       </section>
-      
+
+      <section className={styles.promo}>
+        <h1 className={styles.promoTitle}>What I can offer </h1>
+        <section className={styles.articleContainer}>
+          <article className={styles.promoArticle}>
+            <Image 
+              src="/design.svg" 
+              alt="illustration about design mockups" 
+              width={250} 
+              height={200} 
+              /*layout="fill"*/ 
+            />
+            <h2 className={styles.promoArticleTitle}>Design</h2>
+            <p className={styles.promoArticleText}>Do you need illustrations, logos or ad banners? Maybe a website design with several pages? Name your needs and I create it!</p>
+          </article>
+          <article className={styles.promoArticle}>
+            <Image 
+              src="/wordpress.svg" 
+              alt="illustration about wordpress" 
+              width={250} 
+              height={200} 
+              /*layout="fill"*/ 
+            />
+            <h2 className={styles.promoArticleTitle}>Customization</h2>
+            <p className={styles.promoArticleText}>You alredy have a website and you would like to change the design of it to be not just cool but awesome? No proplem, I can handle that! </p>
+          </article>
+          <article className={styles.promoArticle}>
+            <Image 
+              src="/develop.svg" 
+              alt="illustration about design mockups" 
+              width={250} 
+              height={200} 
+              /*layout="fill"*/ 
+            />
+            <h2 className={styles.promoArticleTitle}>Development</h2>
+            <p className={styles.promoArticleText}>Need a website from scratch? Is it a portfolio? A blog? Or Company's introductional site? Or you would like to promote / sell something? You just have to come up with a good idea and I will do the rest!</p>
+          </article>
+          <article className={styles.promoArticle}>
+            <Image 
+              src="/speed.svg" 
+              alt="illustration about design mockups" 
+              width={250} 
+              height={200} 
+              /*layout="fill"*/ 
+            />
+            <h2 className={styles.promoArticleTitle}>Performance</h2>
+            <p className={styles.promoArticleText}>Did you get some bad reviews about your site because of it's slowliness? I can find and wipe out those nasty problems!</p>
+          </article>
+        </section>
+      </section>
     </div>
   )
 }

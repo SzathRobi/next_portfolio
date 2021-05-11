@@ -1,0 +1,34 @@
+.lamp {
+    width: 100px;
+    height: 120px;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    z-index: 100;
+}
+
+.lampLava {
+  transition: 1s;
+  transform: translate(0rem, 0rem);
+  animation-name: lavaAnimation;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#lava1 #lava3 #lava7 #lava11 {
+    animation-duration: 12s;
+}
+
+#lava2, #lava4, #lava9, #lava10 {
+    animation-duration: 15s;
+}
+
+#lava5, #lava6, #lava8, #lava12 {
+    animation-duration: 18s;
+}
+
+@keyframes lavaAnimation {
+    0% { transform: translate(0rem, 0rem) }
+    50% { transform: translate(0rem, -20rem) }
+    100% { transform: translate(0rem, 0rem) }
+}

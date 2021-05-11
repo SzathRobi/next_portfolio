@@ -1,10 +1,11 @@
 .container {
-  overflow: hidden;
+  position: relative;
+  overflow-x: hidden;
   width: 100%;
-  height: 100vh;
 }
 
 .landing {
+  height: 50vh;
   display: flex;
   flex-direction: row;
 }
@@ -39,9 +40,43 @@
   width: 20rem;
   height: 15rem;
   position: absolute;
-  top: 20rem;
+  top: 19rem;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.promo {
+  padding: 1rem;
+}
+
+.promoTitle {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.articleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.promoArticle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.promoArticleTitle {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.promoArticleText {
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
