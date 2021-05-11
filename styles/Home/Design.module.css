@@ -2,48 +2,107 @@
   width: 120vw;
   height: 45vh;
   position: relative;
-  top: -10vh;
+  top: -8vh;
   left: -10vw;
-  background-color: #0093E9;
-  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
   transform: rotate(-5deg) scale(1.5);
   overflow: hidden;
 }
 
 .obj {
   position: absolute;
-  filter: blur(50px);
+  filter: blur(60px);
   transform: translate(0, 0);
+  opacity: 0.8;
 }
 
 #obj1 {
-    width: 30rem;
-    height: 40rem;
-    background-color: #FC00FF;
-    right: 5rem;
-    bottom: 5rem;
+  width: 30rem;
+  height: 20rem;
+  background-color: #e844eb;
+  right: 5rem;
+  bottom: 5rem;
+  animation: movement1 30s infinite ease-in-out;
 }
 
 #obj2 {
-    width: 45rem;
-    height: 20rem;
-    background-color: #00DBDE;
-    left: 5rem;
-    top: 5rem;
+  width: 45rem;
+  height: 20rem;
+  background-color: #5dd6d8;
+  left: 5rem;
+  top: 5rem;
+  animation: movement2 40s infinite ease-in-out;
 }
 
 #obj3 {
-    width: 10rem;
-    height: 5rem;
-    background-color: #FFCC70;
-    right: 5rem;
-    top: 5rem;
+  width: 10rem;
+  height: 5rem;
+  background-color: #ecaa2e;
+  right: 5rem;
+  top: 5rem;
+  animation: movement2 25s infinite ease-in-out;
 }
 
-#obj1 {
-    width: 30rem;
-    height: 40rem;
-    background-color: #FC00FF;
-    right: 5rem;
-    bottom: 5rem;
+#obj4 {
+  width: 30rem;
+  height: 25rem;
+  background-color: #34d677;
+  left: 5rem;
+  bottom: 5rem;
+  animation: movement1 35s infinite ease-in-out;
+}
+
+#obj5 {
+  width: 30rem;
+  height: 25rem;
+  background-color: #40c9f3;
+  left: 25rem;
+  bottom: 25rem;
+  animation: movement1 45s infinite ease-in-out;
+}
+
+#obj6 {
+  width: 10rem;
+  height: 15rem;
+  background-color: #6495f0;
+  left: 25rem;
+  bottom: 25rem;
+  animation: movement2 35s infinite ease-in-out;
+}
+
+@keyframes movement1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(20rem, 10rem);
+  }
+  50% {
+    transform: translate(10, -5rem);
+  }
+  75% {
+    transform: translate(-20rem, 25rem);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes movement2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(-20rem, -10rem);
+  }
+  50% {
+    transform: translate(-10, 5rem);
+  }
+  75% {
+    transform: translate(25rem, 20rem);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
