@@ -20,17 +20,22 @@ export default function Home() {
           <h2 className={styles.introText} id={styles.landingSubText}>I am a web developer</h2>
           <h3 className={styles.introText} id={styles.landingSubSubText}>My goal is to help people bring their online business to the next level!</h3>
         </article>
-        <div className={styles.imgContainer}>
+        <section className={styles.imgContainer}>
           <Image 
             src="/me.svg" 
             alt="illustration about me" 
             layout="fill" 
           />
-        </div>
+        </section>
+        <section className={styles.ctaContainer}>
+          <button className={styles.cta}>My Services</button>
+          <button className={styles.cta}>My Works</button>
+        </section>
+
       </section>
 
       <section className={styles.promo}>
-        <h1 className={styles.promoTitle}>What I can offer </h1>
+        <h1 className={styles.promoTitle}>My Services</h1>
         <section className={styles.articleContainer}>
           <article className={styles.promoArticle}>
             <Image 

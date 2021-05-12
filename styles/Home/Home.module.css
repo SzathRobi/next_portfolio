@@ -45,12 +45,64 @@
   transform: translateX(-50%);
 }
 
+.ctaContainer {
+  width: 100%;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 35rem;
+}
+
+.cta {
+  position: relative;
+  padding: 0.5rem 2rem;
+  border: none;
+  /*border-radius: 8px;*/
+  background-color: #111111;
+  color: #fff;
+  overflow: hidden;
+}
+
+.cta::before,
+.cta::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-name: none;
+}
+
+.cta::before {
+  top: 0;
+  left: 0;
+  border-top: 2px solid red;
+  border-right: 2px solid red;
+}
+
+.cta::after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 2px solid red;
+  border-left: 2px solid red;
+  animation-delay: 1.5s;
+}
+
+.cta:active::before,
+.cta:active::after {
+  animation-name: btnAnimation;
+}
+
+
 .promo {
   padding: 1rem;
 }
 
 .promoTitle {
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0;
   font-size: 1.8rem;
   text-align: center;
 }
@@ -75,6 +127,7 @@
 }
 
 .promoArticleText {
+  padding: 0 1rem;
   font-size: 1.2rem;
   text-align: center;
 }
@@ -82,5 +135,26 @@
 @media (min-width: 768px) {
   .landing {
     flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cta:hover {
+    animation-name: btnAnimation;
+  }
+}
+
+@keyframes btnAnimation {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  50% {
+    width: calc(100% - 2px);
+    height: 0;
+  }
+  100% {
+    width: calc(100% - 2px);
+    height: 100%;
   }
 }
