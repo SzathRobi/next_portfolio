@@ -4,121 +4,42 @@
   width: 100%;
 }
 
-.landing {
-  height: 50vh;
-  display: flex;
-  flex-direction: row;
-}
-
-.intro {
-  width: 20rem;
-  position: absolute;
-  top: 5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(244, 244, 244, 0.3);
-  padding: 1rem;
-  border-radius: 1rem;
-}
-
-.introText {
-  color: #000;
-}
-
-#landingText {
-  font-size: 1.8rem;
-}
-#landingSubText {
-  font-size: 1.7rem;
-  margin: 0.1rem 0 0.6rem 0;
-}
-#landingSubSubText {
-  font-size: 1.3rem;
-}
-
-.imgContainer {
-  width: 20rem;
-  height: 15rem;
-  position: absolute;
-  top: 19rem;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.ctaContainer {
-  width: 100%;
-  padding: 1rem;
-  margin: 0.5rem 0;
-  display: flex;
-  justify-content: space-evenly;
-  position: absolute;
-  top: 35rem;
-}
-
-.cta {
-  position: relative;
-  padding: 0.5rem 2rem;
-  border: none;
-  /*border-radius: 8px;*/
-  background-color: #111111;
-  color: #fff;
-  overflow: hidden;
-}
-
-.cta::before,
-.cta::after {
-  content: "";
-  width: 0;
-  height: 0;
-  position: absolute;
-  animation-duration: 1.5s;
-  animation-fill-mode: forwards;
-  animation-name: none;
-}
-
-.cta::before {
-  top: 0;
-  left: 0;
-  border-top: 2px solid red;
-  border-right: 2px solid red;
-}
-
-.cta::after {
-  bottom: 0;
-  right: 0;
-  border-bottom: 2px solid red;
-  border-left: 2px solid red;
-  animation-delay: 1.5s;
-}
-
-.cta:active::before,
-.cta:active::after {
-  animation-name: btnAnimation;
-}
 
 
 .promo {
   padding: 1rem;
+  margin: 5rem 0;
 }
 
 .promoTitle {
-  margin: 1.5rem 0;
+  margin: 1.5rem 0 2.5rem;
   font-size: 1.8rem;
   text-align: center;
 }
 
 .articleContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-evenly;
 }
 
 .promoArticle {
+  padding: 2rem 1rem;
+  margin: 1rem 1rem;
+  border-radius: 1rem;
+  min-width: 280px;
+  max-width: 700px;
+  flex: 1;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
-  margin: 1.5rem 0;
+  justify-content: space-evenly;
+  /*box-shadow: inset 2px 2px 8px #555, inset -1px -1px 3px #fff;*/
+}
+
+.promoArticle > div {
+  height: 12rem;
 }
 
 .promoArticleTitle {
@@ -129,32 +50,6 @@
 .promoArticleText {
   padding: 0 1rem;
   font-size: 1.2rem;
-  text-align: center;
-}
-
-@media (min-width: 768px) {
-  .landing {
-    flex-direction: row;
-  }
-}
-
-@media (min-width: 1024px) {
-  .cta:hover {
-    animation-name: btnAnimation;
-  }
-}
-
-@keyframes btnAnimation {
-  0% {
-    width: 0;
-    height: 0;
-  }
-  50% {
-    width: calc(100% - 2px);
-    height: 0;
-  }
-  100% {
-    width: calc(100% - 2px);
-    height: 100%;
-  }
+  text-align: left;
+  width: 26ch;
 }

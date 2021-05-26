@@ -2,9 +2,21 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home/Home.module.css'
 import Design from '../comps/Home/Design'
-import Lamp from '../comps/Home/Lamp'
+import Landing from '../comps/Home/Landing'
 
 export default function Home() {
+
+  /*const cta = document.querySelector(".cta")
+        cta.onmousemove = function(e) {
+            const x = e.pageX - cta.offsetLeft
+            const y = e.pageY - cta.offsetTop
+
+            cta.style.setProperty("--x", x + "px")
+            cta.style.setProperty("--y", y + "px")
+        }*/
+
+  
+
   return (
     <div className={styles.container}>
       <Head>
@@ -14,25 +26,7 @@ export default function Home() {
       </Head>
 
       <Design />
-      <section className={styles.landing}>
-        <article className={styles.intro}>
-          <h1 className={styles.introText} id={styles.landingText}>Hello, my name is Robert</h1>
-          <h2 className={styles.introText} id={styles.landingSubText}>I am a web developer</h2>
-          <h3 className={styles.introText} id={styles.landingSubSubText}>My goal is to help people bring their online business to the next level!</h3>
-        </article>
-        <section className={styles.imgContainer}>
-          <Image 
-            src="/me.svg" 
-            alt="illustration about me" 
-            layout="fill" 
-          />
-        </section>
-        <section className={styles.ctaContainer}>
-          <button className={styles.cta}>My Services</button>
-          <button className={styles.cta}>My Works</button>
-        </section>
-
-      </section>
+      <Landing />
 
       <section className={styles.promo}>
         <h1 className={styles.promoTitle}>My Services</h1>
@@ -45,8 +39,10 @@ export default function Home() {
               height={200} 
               /*layout="fill"*/ 
             />
-            <h2 className={styles.promoArticleTitle}>Design</h2>
-            <p className={styles.promoArticleText}>Do you need illustrations, logos or ad banners? Maybe a website design with several pages? Name your needs and I create it!</p>
+            <div>
+              <h2 className={styles.promoArticleTitle}>Design</h2>
+              <p className={styles.promoArticleText}>Do you need illustrations, logos or ad banners? Maybe a website design with several pages? Name your needs and I create it!</p>
+            </div>
           </article>
           <article className={styles.promoArticle}>
             <Image 
@@ -56,8 +52,10 @@ export default function Home() {
               height={200} 
               /*layout="fill"*/ 
             />
-            <h2 className={styles.promoArticleTitle}>Customization</h2>
-            <p className={styles.promoArticleText}>You alredy have a website and you would like to change the design of it to be not just cool but awesome? No proplem, I can handle that! </p>
+            <div>
+              <h2 className={styles.promoArticleTitle}>Customization</h2>
+              <p className={styles.promoArticleText}>You alredy have a website and you would like to change the design of it to be not just cool but awesome? No proplem, I can handle that! </p>
+            </div>
           </article>
           <article className={styles.promoArticle}>
             <Image 
@@ -67,8 +65,10 @@ export default function Home() {
               height={200} 
               /*layout="fill"*/ 
             />
-            <h2 className={styles.promoArticleTitle}>Development</h2>
-            <p className={styles.promoArticleText}>Need a website from scratch? Is it a portfolio? A blog? Or Company's introductional site? Or you would like to promote / sell something? You just have to come up with a good idea and I will do the rest!</p>
+            <div>
+              <h2 className={styles.promoArticleTitle}>Development</h2>
+              <p className={styles.promoArticleText}>Need a website from scratch? Is it a portfolio? A blog? Or Company's introductional site? Or you would like to promote / sell something? You just have to come up with a good idea and I will do the rest!</p>
+            </div>
           </article>
           <article className={styles.promoArticle}>
             <Image 
@@ -78,8 +78,10 @@ export default function Home() {
               height={200} 
               /*layout="fill"*/ 
             />
-            <h2 className={styles.promoArticleTitle}>Performance</h2>
-            <p className={styles.promoArticleText}>Did you get some bad reviews about your site because of it's slowliness? I can find and wipe out those nasty problems!</p>
+            <div>
+              <h2 className={styles.promoArticleTitle}>Performance</h2>
+              <p className={styles.promoArticleText}>Did you get some bad reviews about your site because of it's slowliness? I can find and wipe out those nasty problems!</p>
+            </div>
           </article>
         </section>
       </section>
